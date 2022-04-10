@@ -1,3 +1,8 @@
+You can also check this on my website
+
+http://jayant-portfolio.herokuapp.com/Projects/1
+
+
 List of Components
 
 BOLT IOT Wi-Fi module
@@ -23,7 +28,7 @@ Connect another lead of LDR to the A0 pin of the Bolt module.
 Connect one leg of 10K ohm resistor to the GND pin.
 Connect another leg of the resistor to the A0 pin.
 
-<src>http://jayant-portfolio.herokuapp.com/images/ldr/1.jpeg</src>
+
 
 Warning!! Make sure that at no point do the 3.3V (or even 5V) and GND pins or wires coming out of them touch each other.
 
@@ -65,7 +70,7 @@ This code will give a chart of time stamp and light intensity 1.02k means highes
 OR 
 CODE-2 //Please copy code2 file here
 
-<src>http://jayant-portfolio.herokuapp.com/Projects/1</src>
+
 
 
 The internal resistance of LDR changes depending on how much light is falling on it. In darkness LDR’s resistance is increased and in more light the LDR’s resistance is decreased.
