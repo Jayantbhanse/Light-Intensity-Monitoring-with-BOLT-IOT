@@ -1,0 +1,87 @@
+List of Components
+
+BOLT IOT Wi-Fi module
+LDR
+Resistor 10k ohm
+USB-A to Mini-USB Cable
+Jumper wires
+ 
+
+Software apps and online services
+
+ 
+
+Bolt IoT cloud platform
+
+ 
+
+Now let’s build the circuit
+
+Make sure the BOLT IoT is powered off
+Connect one lead of LDR to the 3v3 pin of the Bolt IoT module.
+Connect another lead of LDR to the A0 pin of the Bolt module.
+Connect one leg of 10K ohm resistor to the GND pin.
+Connect another leg of the resistor to the A0 pin.
+
+<src>http://jayant-portfolio.herokuapp.com/images/ldr/1.jpeg</src>
+
+Warning!! Make sure that at no point do the 3.3V (or even 5V) and GND pins or wires coming out of them touch each other.
+
+If you short power to Ground without a resistor even accidentally, the current drawn might be high enough to destroy the Bolt module.
+
+ 
+
+Use breadboard and jumper wires for clean connections.
+
+ 
+
+For better understanding of connection look at the pictures attached.
+
+ 
+
+ 
+
+ 
+
+Creating the product and linking it to our bolt device
+
+Login in to your Bolt Cloud account.
+On the left side click on the “product” tab and click on “add product”
+Give a suitable Product icon and product name.
+Select "Input device", as LDR is an input device.
+Select "GPIO" to collect data and then click "Done".
+On the right side click on “configure your product”.
+We will get a "Product Setup" page which has "Hardware" and "Code" tabs.
+In the Hardware tab, select A0 and a variable name(light).
+In the Code tab, write the code to create a chart in.js extension and click "Save".
+Link your product with your device by clicking the "Link" icon.
+
+
+CODE- 1 //Please copy code1 file here
+Save this with .js extension
+
+This code will give a chart of time stamp and light intensity 1.02k means highest amount of light is falling on ldr and lesser the number lesser the intensity of light
+
+OR 
+CODE-2 //Please copy code2 file here
+
+<src>http://jayant-portfolio.herokuapp.com/Projects/1</src>
+
+
+The internal resistance of LDR changes depending on how much light is falling on it. In darkness LDR’s resistance is increased and in more light the LDR’s resistance is decreased.
+
+The analog input pin in bolt iot device can measure the change in voltage (A0).
+
+Change in resistance              Change in voltage is done by voltage divider circuit and its working is governed by ohm’s law.
+
+More the resistance, more the voltage drawn by LDR and vice versa.
+
+This project is based on the principle that whenever the light falling on the sensor changes, the resistance of sensor changes which is then converted into a change in voltage. The ADC pin on Bolt WiFi Module converted this analog voltage level into digital values which are shown on the graphs.
+
+We connect the LDR between 5v pin and the analog input pin (A0), so that when light intensity increases, the resistance of LDR decreases so the voltage across the LDR decreases and as a result, the voltage on the analog input pin increases.
+
+This means that as the light intensity increases, the voltage on the analog input pin also increases. The Bolt then converts that the voltage a 10 bit (10 places in binary number system) digital value that varies from 0-1024 (0 to 2 raised to 10).
+
+This digital data is then sent to the cloud where it is plotted for visual representation.
+
+
